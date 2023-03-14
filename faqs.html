@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="faqs.css">
+</head>
+<body>
+    
+    <div id="faqs">
+        <h1>FAQs</h1>
+        <div class="faq-section">
+            <h2 class="question">1. What is blockchain technology?</h2>
+            <p class="answer">Blockchain is a digital ledger technology that allows transactions to be recorded and verified in a secure and transparent way. Each block in the chain contains a record of multiple transactions and is linked to the previous block, creating a chain of blocks that cannot be altered.</p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">2. How does your fintech company use blockchain technology?</h2>
+            <p class="answer">Our fintech company uses blockchain technology to provide secure and transparent financial services such as digital payments, smart contracts, and tokenization. We also use blockchain to improve the efficiency and reduce the cost of traditional financial services such as clearing and settlements.
+            </p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">3. Is my personal information safe when I use your fintech company's blockchain-based services?
+            </h2>
+            <p class="answer">Yes, personal information is secured and protected. Blockchain technology provides a high level of security and transparency, and our company follows strict data protection and privacy regulations.
+            </p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">4. Can I use your fintech company's blockchain-based services anonymously?
+            </h2>
+            <p class="answer">It depends on the service you are using and the regulations that apply. Some services may allow for anonymous transactions while others may require identity verification to comply with regulations.
+            </p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">5. Are there any fees for using your fintech company's blockchain-based services?
+            </h2>
+            <p class="answer">Our fintech company charges a small fee for its blockchain-based services. The fee structure varies depending on the service you use, it can be based on the transaction value, or based on a flat rate.
+            </p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">6. How do I make transactions using your fintech company's blockchain-based services?
+            </h2>
+            <p class="answer">Our fintech company's blockchain-based services can be accessed via a web or mobile application. You will need to create an account, verify your identity, and then you can make transactions using digital currencies or other blockchain-based assets.
+            </p>
+        </div>
+        <div class="faq-section">
+            <h2 class="question">7. What are the benefits of using your fintech company's blockchain-based services?</dt>
+            </h2>
+            <p class="answer">Our fintech company's blockchain-based services provide many benefits such as security, transparency, efficiency, and cost-effectiveness. It allows for faster, cheaper and more secure transactions, as well as the ability to create smart contracts and tokenize assets.</p>
+        </div>
+        <!-- Add more sections as needed -->
+    </div>
+    
+    
+</body>
+<script>
+    // Get all the question elements
+let questions = document.querySelectorAll(".question");
+
+// Add a click event listener to each question
+questions.forEach(function(question) {
+    question.addEventListener("click", function() {
+        // Get the corresponding answer element
+        let answer = this.nextElementSibling;
+        // Show the answer
+        answer.style.display = "block";
+    });
+});
+
+</script>
+</html>

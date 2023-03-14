@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="side-bar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+    <div id="side-menu">
+        <ul>
+          <li>
+            <a href="#home" id="home-icon" class="icon">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard" id="dashboard-icon" class="icon">
+              <i class="fas fa-chart-line"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#transactions" id="transactions-icon" class="icon">
+              <i class="fas fa-exchange-alt"></i>
+              <span>Transactions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#account" id="account-icon" class="icon">
+              <i class="fas fa-user"></i>
+              <span>Account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+</body>
+<script>
+    const icons = document.querySelectorAll('.icon');
+
+    icons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            icons.forEach(icon => {
+                    icon.classList.remove('active');
+                });
+                this.classList.add('active');
+    });
+});
+
+</script>
+</html>

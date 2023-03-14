@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'client_profile.css' %}">
+    <title>Client Profile</title>
+</head>
+<body>
+    <div class="container">
+        <p>Personal Information</p>
+        <form action="" method="POST">
+          {% csrf_token %}
+            <label for="fname">Full name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <div id="email_div" style="display: block;" >
+
+              <label for="Email">Email</label>
+              <input type="text" name="Email" id="Email">
+              <button  onclick="ajax_send_otp()">Send OTP</button>
+          </div>
+          <div id="verify_text_div"></div>
+          <div id="otp_div" style="display: none;" >
+          
+              <label for="Email">OTP</label>
+              <input type="text" name="otp" id="otp">
+              <button  onclick="verify_otp()">Verify</button>
+          </div><br>
+            <label for="phone number">Phone Number:</label>
+            <input type="text" id="phone number"><br><br>
+            <label for="img">Profile Picture</label>
+            <input type="file" id="profilePicture" name="filename">
+            <div class="container">
+                <form id="form">
+                  <div class="form__buttons">
+                    <a href="#" class="button button--primary" disabled>Continue</a>
+                  </div>
+                </form>
+              </div>
+              <label for="password">Change Password:</label>
+              <input type="text" id="myPassword" name="password"><br><br>
+              <label for="password">Old password:</label>
+              <input type="text" id="oldPassword" name="password">
+              <input type="submit">
+        </form>      
+
+
+    </div>
+     <script>
+       var otp_from_back="";
+       function ajax_send_otp(){
+          document.getElementById("email_div").style.display='none';
+          Email = document.getElementById ("Email");
+        $.post("/send_otp",
+            {
+                "Email":Email.value,
+                "csrfmiddlewaretoken":"{{csrf_token}}"
+            },
+            function(data, status){
+                if(status=="success"){
+                    otp_from_back = data;
+                    document.getElementById("otp_div").style.display='block';
+                    }
+       }
+       );
+       }
+      function verify_otp(){
+          var user_otp=document.getElementById("otp").value;
+          if (user_otp==otp_from_back){
+              document.getElementById("verify_text_div").style.color="green";            
+              document.getElementById("verify_text_div").innerHTML="OTP Verified";
+              document.getElementById("otp_div").style.display="none";
+              document.getElementById("form_div").style.display="block";
+          }
+          else{
+              document.getElementById("verify_text_div").style.color="red";
+              document.getElementById("verify_text_div").innerHTML="Try Again!!";
+          }
+      } 
+   </script>
+</body>
+</html>

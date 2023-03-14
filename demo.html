@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'demo.css' %}">
+<meta charset="utf-8">
+<title>class and ID</title>
+
+
+</head>
+<body>
+    <div class="demo">
+
+<div class="first-heading"><h1 id="head1">CONTACT US</h1>
+</div>,
+<div class="text-part"><div class="first-paragraph"><p1 id="paragraph1">Got a question on SIKEPAY?</p1></div>
+<div class="second-paragraph"><p2 id="paragraph2">Have a feedback,</p2></div>
+<div class="third-paragraph"><p3 id="paragraph3">or</p3></div>
+<div class="fourth-paragraph"><p4 id="paragraph4">a message you would love to convey to us</p4></div></div>
+    <div class="second-heading"><h2 id="head2">CONTACT US</h2></div>
+    <div class="helpline-email">
+        <h2>Our Email: <a href="mailto:stevewaithaka8119@gmail.com">sikepay@sikepay.com</a></h2>
+    </div>
+    <div class="password">
+        <h2>phone number: <a href="tel:+254712345678">+254712345678</a></h2>
+    </div>
+   <div class="message-us"> <label for="message-us">message us:</label>
+
+    <div>
+        <textarea id="message-us" placeholder="type here"></textarea>
+    
+        </textarea>
+    </div>
+    <div class="submit">
+        <form action="/action_page.php">
+            
+            <div class="kakas"><input type="submit" value="Submit"></div>
+          </form>
+          
+    </div>
+
+</div>
+
+
+</body>
+</html>

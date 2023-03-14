@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nav.css">
+   
+</head>
+<body>
+    <nav>
+        <div id="logo">Logo</div>
+        <ul>
+            <li><a href="nav.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <div id="right-nav">
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="side-menu">
+        <ul>
+          <li>
+            <a href="#home" id="home-icon" class="icon">
+              <i class="fas fa-home"></i>
+              <span>Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#dashboard" id="dashboard-icon" class="icon">
+              <i class="fas fa-chart-line"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#transactions" id="transactions-icon" class="icon">
+              <i class="fas fa-exchange-alt"></i>
+              <span>Transactions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#account" id="account-icon" class="icon">
+              <i class="fas fa-user"></i>
+              <span>Account</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    
+    
+    
+</body>
+<script>
+    // If you are using jQuery
+$(document).ready(function() {
+    $("#logo").click(function() {
+        window.location.href = "/home";
+    });
+});
+// Get all the navbar buttons
+let buttons = document.querySelectorAll("nav a");
+
+// Add a click event listener to each button
+buttons.forEach(function(button) {
+    button.addEventListener("click", function(e) {
+        e.preventDefault();
+        // Get the href attribute of the button
+        let buttonHref = button.getAttribute("href");
+        // Use the href attribute to navigate to the corresponding page
+        window.location.href = buttonHref;
+    });
+});
+
+</script>
+</html>
