@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="{% static 'add-wallet.css' %}">
+</head>
+<body> 
+   <div id="add"> 
+        <h1>ADD WALLETS (CRYPTO)<br><br></h1>
+        <h2>TO ADD WALLET</h2>
+        <p>SELECT WALLETS: (NOTE YOU MUST BE A VERIFIED USER OF THE WALLET)</p>
+        <p>ACCEPTABLE WALLETS:<br></p>
+        <form>
+        <input type="radio" id="ETH" value="ETH">
+        <label for="ETH">ETH</label>
+        <input type="radio" id="TETHER" value="TETHER">
+        <label for="TETHER">TETHER</label>
+        <input type="radio" id="USDT"  value="USDT">
+        <label for="USDT">USDT</label>
+        <input type="radio" id="BTC" value="BTC">
+        <label for="radio">BTC</label><br><br><br>
+        INPUT YOUR WALLET ADDRESS :<input type="text" name="name"><br><br>
+        CONIRM YOUR WALLET ADDRESS:<input type="'text" name="name"><br><br>
+        </form><br><br>
+        <h2>THE CODE SENT TO YOUR EMAIL</h2><br><br>
+        <form>
+            <input type="button" value="Submit code">
+        </form><br>
+        <p>
+            <b>Enter Code sent to your email</b><br>
+            <b>__   __   __   __   __</b>
+        </p>
+
+
+        <p>Congratulation you have successfully added USDT Cryptcurrency on sikpay you can now use cryptocurrency to purchase items on listed shop/companies. Sikepay use industry standad measures to protect your private Key ,Wallet ,id and Funds. </p>
+        <br>
+        <p><b>Need Help?</b><br>Visit our <a href="{% static 'url' %}"> Help Center</a> for more information and guidelines on adding a Wallet</p>
+   </div>
+</body>
+</html>  
+
+

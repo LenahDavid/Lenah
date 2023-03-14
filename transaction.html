@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="transanction.css">
+<title>Page Title</title>
+</head>
+<body>
+<div class="transaction-page">
+    <div class="transaction">
+        <h1>TRANSACTION</h1>
+    </div>
+    <div class="available">
+        <h2>AVAILABLE WALLETS:</h2>
+    </div>
+    <div class="trans">
+        <div id="trans1"><button type="button">ETHERIUM <br><br><br>tap to display balance</button></div>
+            <div id="trans2"><button type="button">TETHER <br><br><br>tap to display balance</button></div>
+                <div id="trans3"><button type="button">USDT <br><br><br>tap to display balance</button></div>
+                    <div id="trans4"><button type="button">BTC <br><br><br>tap to display balance</button></div>
+    </div><br><br><br>
+    
+
+<label for="wallet">Choose wallet to be charged:</label>
+
+<select>
+    
+  <option value="ETHERIUM">ETHERIUM</option>
+  <option value="USDT">USDT</option>
+  <option value="TETHER">TETHER</option>
+  <option value="BTC">BTC</option>
+</select>
+<div><br><br>
+    <form>
+        <form>
+            <div id="trans11"><label for="amount">TOTAL AMOUNT:</label></div>
+            <input type="text" id="amount" name="amount"><br><br>
+            <div id="trans12"><label for="adress">PAYMENT ADRESS:</label></div>
+            <input type="text" id="adress" name="adress"><br><br>
+            <div id="trans13"><label for="payment">CONFIRM PAYMENT:</label></div>
+            <input type="text" id="payment" name="payment">
+          </form><br><br>
+
+          <div class="outer">
+                 <div class="save"><button type="submit" class="msgBtn" onClick="return false;" >Save</button></div>
+                     <div class="publish"><button type="submit" class="msgBtn2" onClick="return false;">Publish</button></div>
+                         <div class="back"><button class="msgBtnBack">Back</button></div><br><br>
+            <label for="file">payment status:</label>
+              <progress id="file" value="32" max="100"> 32% </progress><br><br>
+              
+          </div>
+          <a href="HELPLINE.html">need help?</a>
+        
+      </form>
+</div>
+</div>
+</body>
+</html>

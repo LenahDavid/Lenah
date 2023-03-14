@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'history.css' %}">
+</head>
+<body>
+    <div id="history">
+        <button id="button1">[dynamically grab  transaction id]</button><p>you successfully paid</p>
+        
+        <button id="button2">[dynamicaly grab amount and crypto type]</button>
+        <p>to</p> <button id="button3">[dynamically grab shop]</button>
+        
+        <br>
+        <p>sorry payment of </p><button id="button4">[dynamicaly grab amount and crypto type]</button>
+        <p>to</p> <button id="button5">[dynamically grab shop]</button>
+        <p>could not be completed. Please try again</p>
+
+    </div>
+    
+</body>
+</html>

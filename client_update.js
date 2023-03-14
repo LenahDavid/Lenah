@@ -1,0 +1,3 @@
+function updateButton(){
+    alert("Updating");
+}
