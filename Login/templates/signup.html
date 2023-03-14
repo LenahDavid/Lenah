@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for message in message %}
+        <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+        <strong>Message</strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="close">
+        <span aria-hidden="true">&time;</span>
+
+        </button>
+        </div>
+        {% endfor %}
+
+        <h3>Sign Up</h3>
+        <form action="/signup" method="post">
+            {% csrf_token %}
+            <label form="">Username</label>
+            <input type="text" id="username" name="username" placeholder="Create a username(only letters and numbers)" Required>
+             <br>
+
+            <label form="">FirstName</label>
+            <input type="text" id="fname" name="fname" placeholder="Enter Your FirstName" Required>
+            <br>
+
+            <label form="">LastName</label>
+            <input type="text" id="lname" name="lname" placeholder="Enter your LastName" Required>
+            <br>
+
+            <label form="">Email</label>
+            <input type="email" id="email" name="email" placeholder="ENter your Email Address" Required>
+            <br>
+
+            <label form="">Password</label>
+            <input type="password" id="pass1" name="pass1" placeholder="Create a Password" Required>
+            <br>
+
+            <label form="">Confirm Password</label>
+            <input type="password" id="pass2" name="pass2" placeholder="Confirm Password" Required>
+            <br>
+
+            <button type="Submit">Sign Up</button>
+        </form>
+    </body>
+</html>
